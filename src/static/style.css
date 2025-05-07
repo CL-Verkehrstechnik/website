@@ -354,21 +354,23 @@ nav img {
     font-size: 1.2em;
 }
 
+
 .sectwobutton {
+    display: inline-block;
+    text-align: center;
     background-color: var(--main-bg);
     border-radius: 8px;
     font-size: large;
     padding: 0.5em 2em;
-    border: 0;
+    border: none;
     font-weight: 400;
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
     margin: 1em auto;
     width: 25%;
+    color: white;
+    text-decoration: none;
 }
 
-.sectwobutton a {
-    color: white;
-}
 
 .sectwobutton:hover {
     background-color: var(--main-bg-secondary);
@@ -556,8 +558,11 @@ nav img {
     line-height: 1.5em;
 }
 
-.aboutus .sectwobutton {
-    margin-left: 1em;
+.aboutus-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .sideshow-container {
@@ -1044,7 +1049,7 @@ form #category {
     }
 
     .contactformular {
-        width: 100%;
+        width: 67%;
     }
 
     .contactformular h1 {

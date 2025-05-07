@@ -1,5 +1,5 @@
 ---
-title: CL-Verkehrstechnik | Kontaktformular 
+title: CL-Verkehrstechnik | Kontaktformular
 ---
 {% extends "base.njk" %}
 {% block content %}
@@ -23,8 +23,10 @@ title: CL-Verkehrstechnik | Kontaktformular
             <input type="text" id="subject" name="subject" required>
             <label for="category">Kategorie:</label>
             <select id="category" name="category">
-                <option value="Anfrage">Anfrage</option>
-                <option value="Seminar">Seminar</option>
+                <option value="Anfrage">Allgemeine Anfrage</option>
+                <option value="Hinweistafeln">Hinweistafeln</option>
+                <option value="Seminare">Seminare</option>
+                <option value="Verkehrszeichenpläne">Verkehrszeichenpläne</option>
             </select>
 
             <label for="message">Nachricht</label>
