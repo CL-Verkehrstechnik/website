@@ -1,0 +1,1090 @@
+:root {
+    --main-bg: #D10811;
+    --main-bg-dark: #D10811;
+    --main-bg-secondary: #848484;
+    --main-sec: #313D5A;
+    --secondary: #969595;
+    --primary: #CBC5EA;
+    --font: rgb(48, 48, 48);
+}
+
+html {
+    background-color: white;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    max-width: 72em;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    background: #dedede68;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--font);
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: black;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2em;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: var(--font);
+    font-size: 18px;
+}
+
+.header {
+    background-color: var(--main-bg-dark);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
+    z-index: 999;
+    margin: 0;
+    border: solid 0px #000000;
+}
+
+.full {
+    border-radius: 0;
+    width: 100%;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.3s linear;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 42px;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+nav a:hover {
+    color: #ECFED6;
+    transform: translateY(-4%);
+    transition: all 0.4s;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+#headerlogoa {
+    padding: 0 30px 0 6px;
+}
+
+.logo {
+    height: 64px;
+    width: auto;
+    filter: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: var(--main-bg);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px #1f2937;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 0;
+    margin-right: 0;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.3s ease;
+}
+
+.open {
+    transform: translateX(0);
+    /* Added */
+    opacity: 1;
+    /* Added */
+}
+
+.sidebar li {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.sidebar a:hover {
+    color: #ECFED6;
+    transform: translateY(-4%);
+    transition: all 0.4s;
+}
+
+nav img {
+    height: 26px;
+    width: 26px;
+    filter: invert();
+}
+
+.menubtn {
+    display: none;
+}
+
+.secone {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: var(--font);
+    width: 100%;
+    max-width: 92em;
+    margin: 0 auto;
+    margin-top: 2em;
+    /* Apple-ähnlicher Hintergrund */
+    min-height: 50dvh;
+}
+
+.secone::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/static/images/plan.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+    opacity: 0.5;
+    z-index: -1;
+    width: 100%;
+    /* Stellt sicher, dass es genau so breit ist wie .secone */
+    height: 100%;
+    /* Stellt sicher, dass es die gesamte Höhe einnimmt */
+}
+
+
+.business-card {
+    background-color: #f5f5f7;
+    border: solid black 1.4px;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 90%;
+    max-width: 480px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    margin-bottom: 3em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.business-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5em 2em;
+    text-align: center;
+}
+
+.card-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.secone h2 {
+    margin: 0 0 0.5em 0;
+    color: #000;
+    font-weight: 600;
+    font-size: 1.8em;
+    letter-spacing: -0.02em;
+}
+
+.tagline {
+    color: #818181;
+    font-size: 1.1em;
+    margin: 0;
+    font-weight: 400;
+    text-shadow: #c1c1c1 1px 1px 1px;
+}
+
+.secone a {
+    margin-top: 2em;
+}
+
+.seconebutton {
+    background-color: var(--secondary);
+    color: white;
+    border-radius: 8px;
+    font-size: large;
+    padding: 0.5em 2em;
+    border: 0;
+    font-weight: 400;
+    margin-top: 2em;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+}
+
+.seconebutton:hover {
+    background-color: var(--main-bg-secondary);
+    color: rgb(240, 240, 240);
+    transform: translateY(-4%);
+}
+
+.secone a img {
+    margin: 0;
+    padding: 8px;
+    width: 3em;
+    filter: invert(0.5);
+    transition: transform 0.4s ease, filter 0s ease;
+}
+
+.secone a img:hover {
+    transform: translateY(8%);
+    filter: invert(26%) sepia(100%) saturate(6968%) hue-rotate(357deg) brightness(113%) contrast(122%);
+}
+
+
+.sectwo {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-content: baseline;
+    padding: 3em;
+    margin: 6em 2em 6em 2em;
+    color: var(--font);
+    text-align: justify;
+    background-color: #cccccc;
+    border: 0px;
+    border-radius: 2em;
+    box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 1);
+    overflow: hidden;
+    /* Verhindert, dass das Bild über die Section hinausgeht */
+    z-index: 1;
+}
+
+.sectwo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/static/images/background-icons.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(6px);
+    opacity: 0.3;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+
+.sectwo .left {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+}
+
+.sectwo .left h2 {
+    color: var(--font);
+    margin-bottom: 0;
+    font-size: 2em;
+}
+
+.sectwo .left h3 {
+    color: white;
+    margin-top: 0;
+    font-size: 3em;
+}
+
+.sectwo .left p {
+    max-width: 69em;
+    font-size: 1.2em;
+}
+
+.sectwobutton {
+    background-color: var(--main-bg);
+    border-radius: 8px;
+    font-size: large;
+    padding: 0.5em 2em;
+    border: 0;
+    font-weight: 400;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
+    margin: 1em auto;
+    width: 25%;
+}
+
+.sectwobutton a {
+    color: white;
+}
+
+.sectwobutton:hover {
+    background-color: var(--main-bg-secondary);
+    color: rgb(240, 240, 240);
+    transform: translateY(-4%);
+    transition: ease-in-out 0.2s;
+}
+
+.sectwo .right {
+    margin: 3em 0 0 4em;
+}
+
+.sectwo .right img {
+    max-width: 30em;
+    border: solid #313D5A 2px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+#principles {
+    margin: 4em 0 8em 0;
+    padding: 5em 4em 8em 2em;
+    position: relative;
+    z-index: 1;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: rgb(212, 212, 212);
+}
+
+#principles .left {
+    background-color: #f5f5f7;
+    padding: 1em;
+    border: solid black 1.4px;
+}
+
+#principles .left ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+}
+
+#principles .left ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2em;
+    text-align: left;
+}
+
+#principles .left ul li img {
+    height: 20px;
+    filter: invert(29%) sepia(57%) saturate(5507%) hue-rotate(343deg) brightness(84%) contrast(123%);
+    width: auto;
+}
+
+#principles .left ul li .text {
+    font-size: larger;
+}
+
+#principles .left ul li strong {
+    font-weight: 900;
+    color: #D10811;
+}
+
+#principles::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-image: url("/static/images/plan2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(2px);
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.triangle-section {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 2em;
+    justify-items: center;
+    text-align: center;
+    margin: 0em 2em 10em 2em;
+    padding: 5em 2em 5em 2em;
+    border: 0px;
+    border-radius: 32px;
+    z-index: 1;
+    position: relative;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.triangle-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 100%;
+    background-image: url("/static/images/background-icons.png");
+    background-repeat: repeat-y;
+    background-size: cover;
+    filter: blur(8px);
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.triangle-item {
+    background: #D10811;
+    color: white;
+    text-shadow: rgb(20, 20, 20) 1px 0 10px;
+    padding: 2em;
+    border-radius: 24px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.triangle-item h3 {
+    color: #f3f3f3;
+}
+
+/* Erste Box oben, zwei unten */
+.triangle-item:nth-child(1) {
+    grid-column: span 2;
+    justify-self: center;
+}
+
+.triangle-item:nth-child(2),
+.triangle-item:nth-child(3) {
+    justify-self: center;
+}
+
+.triangle-button {
+    grid-column: span 2;
+    background-color: #AEA7A7;
+    font-size: 1.2em;
+    font-weight: medium;
+    padding: 0.5em 1.5em;
+    border: solid white 1px;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.75);
+    margin-top: 2em;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.triangle-button a {
+    color: white;
+}
+
+.triangle-button:hover {
+    background-color: #a5060d;
+}
+
+.aboutus {
+    text-align: justify;
+}
+
+.aboutus .banner img {
+    width: 100%;
+    height: 24em;
+    object-fit: cover;
+    object-position: 100% 80%;
+}
+
+.aboutus .text {
+    padding: 1em;
+}
+
+.aboutus .text h1 {
+    font-size: 3em;
+}
+
+.aboutus .text p {
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+.aboutus .sectwobutton {
+    margin-left: 1em;
+}
+
+.sideshow-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 24em;
+    overflow: hidden;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(117, 117, 117);
+    background: none;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+    transition: color 0.3s;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.sideshow-pictures {
+    display: flex;
+    width: 100%;
+    height: 24em;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.sideshow-pictures>div {
+    flex: 0 0 100%;
+    height: 24em;
+    scroll-snap-align: start;
+}
+
+.sideshow-pictures img {
+    width: 100%;
+    height: 24em;
+    object-fit: cover;
+}
+
+.services-container ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.services-container ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.services-container ul li img {
+    max-width: 2rem;
+    filter: invert(26%) sepia(100%) saturate(6968%) hue-rotate(357deg) brightness(113%) contrast(122%)
+}
+
+.services .text {
+    padding: 0;
+}
+
+.services h1 {
+    margin-left: 2rem;
+}
+
+.services h3 {
+    color: #a50000;
+    margin-top: 3rem;
+}
+
+.services h3,
+.services p {
+    padding: 0 2rem 0 2rem;
+}
+
+.services ul {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    margin-left: 1rem;
+    gap: 1rem;
+    list-style-type: disc;
+}
+
+.services ul li {
+    font-size: large;
+}
+
+.services .sectwobutton {
+    margin: 0 3rem 0 3rem;
+}
+
+.contactformular {
+    max-width: 30em;
+}
+
+.impressum {
+    background-color: var(--main-bg);
+    color: #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 2em 4em;
+    gap: 1em;
+}
+
+.impressum img {
+    max-height: 80px;
+    margin-top: 2em;
+}
+
+.impressum a {
+    color: white;
+}
+
+.impressum a:hover {
+    color: #F5F717;
+    transform: translateY(-4%);
+    transition: ease-in-out 0.2s;
+}
+
+.impressum h3 {
+    margin-bottom: 0;
+}
+
+.impressum p {
+    margin: 0;
+}
+
+.imprcontainer {
+    margin-left: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 14em;
+
+}
+
+.footer {
+    background-color: var(--main-bg);
+    color: #e5e7eb;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    flex-direction: column;
+}
+
+.footer ul {
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.totop {
+    background: var(--main-bg-secondary);
+    position: fixed;
+    bottom: 64px;
+    right: 64px;
+    width: 32px;
+    height: 32px;
+    border: var(--secondary);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0 4px #000000;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.totop.active {
+    bottom: 64px;
+    opacity: 80%;
+    pointer-events: auto;
+    z-index: 999;
+}
+
+.telbutton {
+    background: var(--main-bg-secondary);
+    position: fixed;
+    bottom: 64px;
+    right: 64px;
+    width: 32px;
+    height: 32px;
+    border: var(--secondary);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0 4px #000000;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.telbutton.active {
+    bottom: 164px;
+    opacity: 60%;
+    pointer-events: auto;
+    z-index: 999;
+}
+
+.mailbutton {
+    background: var(--main-bg-secondary);
+    position: fixed;
+    bottom: 64px;
+    right: 64px;
+    width: 32px;
+    height: 32px;
+    border: var(--secondary);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0 4px #000000;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.mailbutton.active {
+    bottom: 114px;
+    opacity: 60%;
+    pointer-events: auto;
+    z-index: 999;
+}
+
+.totop img,
+.telbutton img,
+.mailbutton img {
+    width: 18px;
+    filter: invert();
+}
+
+.spacer {
+    margin-bottom: 8em;
+}
+
+.impressum-page {
+    margin: 0em 2em 0em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1em;
+    text-align: justify;
+    overflow: auto;
+}
+
+.impressum-page p {
+    color: var(--font);
+    margin: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+}
+
+form button {
+    background-color: var(--secondary);
+    color: white;
+    border-radius: 8px;
+    font-size: large;
+    padding: 0.5em;
+    border: 0;
+    font-weight: 400;
+    margin-top: 8px;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
+    margin-bottom: 3em;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: var(--main-bg-secondary);
+    transition: ease-in-out 0.5s;
+    color: rgb(232, 232, 232);
+}
+
+form #category {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+}
+
+
+@media all and (max-width: 1250px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menubtn {
+        display: block;
+    }
+
+
+}
+
+@media all and (max-width: 1000px) {
+    h1 {
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    .header a {
+        font-size: small;
+    }
+
+    nav ul {
+        margin-right: 0;
+    }
+
+    #principles {
+        text-align: left;
+    }
+
+}
+
+@media all and (max-width: 890px) {
+    .header a {
+        font-size: medium;
+    }
+
+    .business-card {
+        width: 95%;
+    }
+
+    .card-content {
+        padding: 2em 1.5em;
+    }
+
+    .card-logo {
+        width: 100px;
+    }
+
+    .secone h2 {
+        font-size: 1.5em;
+    }
+
+    .tagline {
+        font-size: 1em;
+    }
+
+    .seconeright {
+        max-width: 20em;
+    }
+
+    .sectwo .left h2 {
+        font-size: 1.2em;
+    }
+
+    .sectwo .left h3 {
+        font-size: 1.4em;
+        text-align: justify;
+        font-weight: bold;
+    }
+
+    .sectwo .left p {
+        text-align: left;
+    }
+
+    .sectwobutton {
+        width: auto;
+
+    }
+
+    #principles .left h2 {
+        font-size: 2em;
+    }
+
+    .triangle-section {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 1.5em;
+        margin: 2em;
+        padding: 3em 1em;
+        margin-bottom: 8em;
+    }
+
+    .triangle-item {
+        max-width: 100%;
+        justify-self: center;
+    }
+
+    .triangle-item:nth-child(1) {
+        grid-column: auto;
+    }
+
+    .triangle-button {
+        grid-column: auto;
+        justify-self: center;
+        width: fit-content;
+        padding: 1em 2em;
+    }
+
+    .imprcontainer {
+        gap: 4em;
+    }
+
+    .footer {
+        text-align: center;
+    }
+}
+
+@media all and (max-width: 690px) {
+    .logo {
+        height: 36px;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .business-card {
+        width: 95%;
+    }
+
+    .card-content {
+        padding: 1.5em 1em;
+    }
+
+    .card-logo {
+        width: 80px;
+    }
+
+    .services {
+        text-align: left;
+    }
+
+    .seconeleft {
+        display: flex;
+        justify-content: center;
+    }
+
+    #about h1 {
+        font-size: xx-large;
+        text-align: center;
+    }
+
+    #principles {
+        padding: 0.8em;
+    }
+
+    .contactformular {
+        width: 100%;
+    }
+
+    .contactformular h1 {
+        font-size: xx-large;
+    }
+
+    .imprcontainer {
+        display: block;
+    }
+
+    .totop.active {
+        bottom: 24px;
+        right: 24px;
+        opacity: 60%;
+    }
+
+    .telbutton.active {
+        bottom: 64px;
+        right: 24px;
+        opacity: 60%;
+    }
+
+    .mailbutton.active {
+        bottom: 104px;
+        right: 24px;
+        opacity: 60%;
+    }
+}
+
+/* Observer animation */
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-20%);
+    transition: all ease 0.8s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}

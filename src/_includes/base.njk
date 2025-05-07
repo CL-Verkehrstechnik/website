@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="CL-Verkehrstechnik - Professionelle Verkehrslösungen. Umfassende  Dienstleistungen zur Erstellung von Verkehrszeichenplänen, Hilfe bei Genehmigungsverfahren, RSA 21-Semianre, sowie Erstellung und Produktion von Planskizzen und Hinweistafeln. Buchen Sie jetzt ein Seminar oder kontaktieren Sie uns für einen Verkehrszeichenplan, jetzt über unser interaktives Kontaktformular!">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
+  <link rel="manifest" href="/static/images/site.webmanifest">
+  <script src="/static/script.js"></script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "name": "CL VERKEHRSTECHNIK GbR",
+  "alternateName": "CL Verkehrstechnik",
+  "url": "https://cl-verkehrstechnik.de",
+  "logo": "https://cl-verkehrstechnik.de/static/images/logo.jpg"
+}
+</script>
+</head>
+
+<body>
+  {% include "./header.njk" %}
+
+  {% block content %} {% endblock %}
+
+  {% include "./imprsec.njk" %}
+  {% include "./footer.njk" %}
+</body>
+
+</html>
