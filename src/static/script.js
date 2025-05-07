@@ -147,7 +147,7 @@ function smoothScrollWithOffset(selector, offset = 200) {
     const subjectPrefix = category.toUpperCase() + ": ";
 
     // `mailto`-Link erstellen
-    const mailtoLink = `mailto:cl-verkehrstechnik@gmx.de?subject=${encodeURIComponent(subjectPrefix + subject)}&body=${encodeURIComponent(
+    const mailtoLink = `mailto:info@cl-verkehrstechnik.de?subject=${encodeURIComponent(subjectPrefix + subject)}&body=${encodeURIComponent(
         `Name: ${name}\nTelefonnummer: ${number}\nE-Mail: ${email}\n\nNachricht:\n${message}`
     )}`;
 
